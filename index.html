@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love Letter with Song</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      background: radial-gradient(circle, #ff9a9e, #fecfef);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .container {
-      text-align: center;
-      background: white;
-      padding: 20px 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 2s ease;
-    }
-
-    h1 {
-      color: #e63946;
-      font-size: 2.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #555;
-      margin: 15px 0;
-    }
-
-    .heart {
-      color: #e63946;
-      font-size: 2rem;
-      animation: heartbeat 1s infinite;
-    }
-
-    button {
-      background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes heartbeat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-    }
-
-    audio {
-      margin-top: 20px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffe4e1;
+        }
+        .button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .slide img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .active {
+            display: block;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+        .nav button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Jeremiah 29:11 <i class="fas fa-battery-bolt    "></i>  ❤️</h1>
-    <p>
-      If you're tired, you can always take a rest.
-Don't always push yourself to the limit, you're only human, you have feelings too. And if you have problems, you can always talk to me or the people around you.  <span class="heart">💖</span>
-    </p>
-    <p>
-      But if they're not there, I'm here, ready to listen to all your rants,
-I will
-not judge you
-    </p>
-    <p>
-      okay and I'm so proud of you because you still manage to get up every day even when you-re tired, keep it up.
-    </p>
-    <button onclick="showLove()">always take a rest(CLICK)
-    </button>
+    <!-- Page 1 -->
+    <div id="page1">
+        <h1>Welcome to My Love Letter</h1>
+        <a href="#page2" class="button">Read the Letter</a>
+    </div>
 
-    <!-- Audio player for the song -->
-    <audio controls>
-      <!-- Replace 'c:\Users\ADMIN\Downloads\Frank Ocean - Wiseman (Lyrics).mp3' with the actual file path or URL of your song -->
-      <source src="c:\Users\ADMIN\Downloads\Frank Ocean - Wiseman (Lyrics).mp3" type="c:\Users\ADMIN\Downloads\Frank Ocean - Wiseman (Lyrics).mp3">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+    <!-- Page 2 -->
+    <div id="page2" style="display:none;">
+        <h1>My Love Letter</h1>
+        <div class="slideshow">
+            <div class="slide active">
+                <img src="https://via.placeholder.com/100?text=❤️" alt="Heart">
+                My dearest,
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/100?text=🌸" alt="Flower">
+                Every moment with you feels like magic...
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/100?text=❤️" alt="Heart">
+                Your smile lights up my world.
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/100?text=🌼" alt="Flower">
+                Forever yours,
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/100?text=❤️" alt="Heart">
+                [Your Name]
+            </div>
+        </div>
+        <div class="nav">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
 
-  <script>
-    function showLove() {
-      alert("run to me when everything feels heavy, when the world seems to be against you, when you feel alone and lost. i'll be there. i'll be your kakampi sa lahat💕");
-    }
-  </script>
+    <script>
+        // Navigation between pages
+        document.querySelector('.button').addEventListener('click', function() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        });
+
+        // Slideshow functionality
+        let slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+        });
+    </script>
 </body>
 </html>
